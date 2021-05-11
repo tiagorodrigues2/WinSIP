@@ -37,11 +37,11 @@ namespace WinSIP
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.browserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.template2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerirUtilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerirCódigosDeAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selecionarMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,7 @@ namespace WinSIP
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tabelasToolStripMenuItem,
             this.browserToolStripMenuItem,
+            this.selecionarMonitorToolStripMenuItem,
             this.administraçaoToolStripMenuItem,
             this.gerenciarContaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -68,7 +69,7 @@ namespace WinSIP
             this.filesToolStripMenuItem,
             this.playlistToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
-            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
+            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
             // 
             // displaysToolStripMenuItem
@@ -101,18 +102,10 @@ namespace WinSIP
             // 
             // browserToolStripMenuItem
             // 
-            this.browserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.template2ToolStripMenuItem});
             this.browserToolStripMenuItem.Name = "browserToolStripMenuItem";
-            this.browserToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
-            this.browserToolStripMenuItem.Text = "Browser";
-            // 
-            // template2ToolStripMenuItem
-            // 
-            this.template2ToolStripMenuItem.Name = "template2ToolStripMenuItem";
-            this.template2ToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.template2ToolStripMenuItem.Text = "Template 2";
-            this.template2ToolStripMenuItem.Click += new System.EventHandler(this.template2ToolStripMenuItem_Click);
+            this.browserToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.browserToolStripMenuItem.Text = "Monitor";
+            this.browserToolStripMenuItem.Click += new System.EventHandler(this.browserToolStripMenuItem_Click);
             // 
             // administraçaoToolStripMenuItem
             // 
@@ -120,7 +113,7 @@ namespace WinSIP
             this.gerirUtilizadoresToolStripMenuItem,
             this.gerirCódigosDeAcessoToolStripMenuItem});
             this.administraçaoToolStripMenuItem.Name = "administraçaoToolStripMenuItem";
-            this.administraçaoToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
+            this.administraçaoToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.administraçaoToolStripMenuItem.Text = "Administraçao";
             // 
             // gerirUtilizadoresToolStripMenuItem
@@ -140,9 +133,16 @@ namespace WinSIP
             // gerenciarContaToolStripMenuItem
             // 
             this.gerenciarContaToolStripMenuItem.Name = "gerenciarContaToolStripMenuItem";
-            this.gerenciarContaToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
+            this.gerenciarContaToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.gerenciarContaToolStripMenuItem.Text = "Gerenciar Conta";
             this.gerenciarContaToolStripMenuItem.Click += new System.EventHandler(this.gerenciarContaToolStripMenuItem_Click);
+            // 
+            // selecionarMonitorToolStripMenuItem
+            // 
+            this.selecionarMonitorToolStripMenuItem.Name = "selecionarMonitorToolStripMenuItem";
+            this.selecionarMonitorToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.selecionarMonitorToolStripMenuItem.Text = "Selecionar Monitor";
+            this.selecionarMonitorToolStripMenuItem.Click += new System.EventHandler(this.selecionarMonitorToolStripMenuItem_Click);
             // 
             // FormMDI
             // 
@@ -172,11 +172,11 @@ namespace WinSIP
         private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem browserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem template2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraçaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerenciarContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirUtilizadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirCódigosDeAcessoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selecionarMonitorToolStripMenuItem;
     }
 }
 

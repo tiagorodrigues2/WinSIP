@@ -1,3 +1,3 @@
 ﻿
-Intigridade na senha (escrito palavra-passe num lado, senha no outro)
-Intigridade de estilo nos formularios de login e registo
+Adicionar try-catch nos novos algoritemos;
+Acabar a escolha de monitor (Handle select event: ChoseMonitor_SelectMonitor);

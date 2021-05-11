@@ -29,6 +29,8 @@ namespace WinSIP
 
         public User_t LoggedUser;
 
+        public Screen DisplayMonitor;
+
         public FormMDI()
         {
             InitializeComponent();
@@ -56,6 +58,19 @@ namespace WinSIP
             GruposPlaylistViewer.MdiParent = this;
             UsersViewer.MdiParent = this;
             CodesViewer.MdiParent = this;
+
+            DisplayMonitor = null;
+
+            for ( int i = 0; i < Screen.AllScreens.Count(); i++ )
+            {
+                if ( Screen.AllScreens[i].DeviceName.Equals( Properties.Settings.Default.DisplayMonitor ) )
+                    DisplayMonitor = Screen.AllScreens[i];
+            }
+
+            if ( DisplayMonitor == null )
+            {
+                DisplayMonitor = Screen.AllScreens[0];
+            }
 
             Form_Login Login = new Form_Login();
             Login.ShowDialog();
@@ -98,12 +113,6 @@ namespace WinSIP
             FRM.Show();
         }
 
-        private void template2ToolStripMenuItem_Click( object sender, EventArgs e )
-        {
-            Form_Display_View Choser = new Form_Display_View();
-            Choser.SelectDisplay += this.Choser_SelectDisplay;
-            Choser.ShowDialog();
-        }
 
         private void Choser_SelectDisplay( int IdDisplay )
         {
@@ -151,6 +160,30 @@ namespace WinSIP
         private void gerirCódigosDeAcessoToolStripMenuItem_Click( object sender, EventArgs e )
         {
             CodesViewer.Show();
+        }
+
+        private void browserToolStripMenuItem_Click( object sender, EventArgs e )
+        {
+            Form_Display_View Choser = new Form_Display_View();
+            Choser.SelectDisplay += this.Choser_SelectDisplay;
+            Choser.ShowDialog();
+        }
+
+        private void selecionarMonitorToolStripMenuItem_Click( object sender, EventArgs e )
+        {
+            Form_ChoseMonitor choseMonitor = new Form_ChoseMonitor( this );
+            choseMonitor.SelectMonitor += this.ChoseMonitor_SelectMonitor;
+            choseMonitor.ShowDialog();
+
+        }
+
+        private void ChoseMonitor_SelectMonitor( string DeviceName )
+        {
+           
+            for ( int i = 0; i < Screen.AllScreens.Count(); i++ )
+            {
+
+            }
         }
     }
 }
