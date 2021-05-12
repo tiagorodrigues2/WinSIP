@@ -1,3 +1,1 @@
 ﻿
-Adicionar try-catch nos novos algoritemos;
-Acabar a escolha de monitor (Handle select event: ChoseMonitor_SelectMonitor);

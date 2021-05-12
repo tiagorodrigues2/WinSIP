@@ -61,15 +61,22 @@ namespace WinSIP
 
             DisplayMonitor = null;
 
-            for ( int i = 0; i < Screen.AllScreens.Count(); i++ )
+            try
             {
-                if ( Screen.AllScreens[i].DeviceName.Equals( Properties.Settings.Default.DisplayMonitor ) )
-                    DisplayMonitor = Screen.AllScreens[i];
-            }
+                for ( int i = 0; i < Screen.AllScreens.Count(); i++ )
+                {
+                    if ( Screen.AllScreens[i].DeviceName.Equals( Properties.Settings.Default.DisplayMonitor ) )
+                        DisplayMonitor = Screen.AllScreens[i];
+                }
 
-            if ( DisplayMonitor == null )
+                if ( DisplayMonitor == null )
+                {
+                    DisplayMonitor = Screen.AllScreens[0];
+                }
+            }
+            catch ( Exception ex )
             {
-                DisplayMonitor = Screen.AllScreens[0];
+                MessageBox.Show( this, ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
             }
 
             Form_Login Login = new Form_Login();
@@ -178,11 +185,39 @@ namespace WinSIP
         }
 
         private void ChoseMonitor_SelectMonitor( string DeviceName )
-        {
-           
+        {      
             for ( int i = 0; i < Screen.AllScreens.Count(); i++ )
             {
+                if ( DeviceName.Equals( Screen.AllScreens[i].DeviceName ) )
+                {
+                    DisplayMonitor = Screen.AllScreens[i];
+                    Properties.Settings.Default.DisplayMonitor = DisplayMonitor.DeviceName;
+                    break;
+                }
+            }
+        }
 
+        private void abrirMonitorToolStripMenuItem_Click( object sender, EventArgs e )
+        {
+            Form_Display_View Choser = new Form_Display_View();
+            Choser.SelectDisplay += this.Choser_SelectDisplay1;
+            Choser.ShowDialog();
+        }
+
+        private void Choser_SelectDisplay1( int IdDisplay )
+        {
+            try
+            {
+                Form_Template2 Monitor = new Form_Template2( IdDisplay );
+                Monitor.Location = DisplayMonitor.Bounds.Location;
+                Monitor.FormBorderStyle = FormBorderStyle.None;
+                Monitor.WindowState = FormWindowState.Maximized;
+                Monitor.Show();
+                Monitor.Focus();
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show( this, ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
             }
         }
     }

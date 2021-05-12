@@ -37,11 +37,12 @@ namespace WinSIP
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.browserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selecionarMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerirUtilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerirCódigosDeAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.selecionarMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@ namespace WinSIP
             this.tabelasToolStripMenuItem,
             this.browserToolStripMenuItem,
             this.selecionarMonitorToolStripMenuItem,
+            this.abrirMonitorToolStripMenuItem,
             this.administraçaoToolStripMenuItem,
             this.gerenciarContaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -104,8 +106,15 @@ namespace WinSIP
             // 
             this.browserToolStripMenuItem.Name = "browserToolStripMenuItem";
             this.browserToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.browserToolStripMenuItem.Text = "Monitor";
+            this.browserToolStripMenuItem.Text = "Testar Monitor";
             this.browserToolStripMenuItem.Click += new System.EventHandler(this.browserToolStripMenuItem_Click);
+            // 
+            // selecionarMonitorToolStripMenuItem
+            // 
+            this.selecionarMonitorToolStripMenuItem.Name = "selecionarMonitorToolStripMenuItem";
+            this.selecionarMonitorToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.selecionarMonitorToolStripMenuItem.Text = "Selecionar Monitor";
+            this.selecionarMonitorToolStripMenuItem.Click += new System.EventHandler(this.selecionarMonitorToolStripMenuItem_Click);
             // 
             // administraçaoToolStripMenuItem
             // 
@@ -137,12 +146,12 @@ namespace WinSIP
             this.gerenciarContaToolStripMenuItem.Text = "Gerenciar Conta";
             this.gerenciarContaToolStripMenuItem.Click += new System.EventHandler(this.gerenciarContaToolStripMenuItem_Click);
             // 
-            // selecionarMonitorToolStripMenuItem
+            // abrirMonitorToolStripMenuItem
             // 
-            this.selecionarMonitorToolStripMenuItem.Name = "selecionarMonitorToolStripMenuItem";
-            this.selecionarMonitorToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.selecionarMonitorToolStripMenuItem.Text = "Selecionar Monitor";
-            this.selecionarMonitorToolStripMenuItem.Click += new System.EventHandler(this.selecionarMonitorToolStripMenuItem_Click);
+            this.abrirMonitorToolStripMenuItem.Name = "abrirMonitorToolStripMenuItem";
+            this.abrirMonitorToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.abrirMonitorToolStripMenuItem.Text = "Abrir Monitor";
+            this.abrirMonitorToolStripMenuItem.Click += new System.EventHandler(this.abrirMonitorToolStripMenuItem_Click);
             // 
             // FormMDI
             // 
@@ -177,6 +186,7 @@ namespace WinSIP
         private System.Windows.Forms.ToolStripMenuItem gerirUtilizadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirCódigosDeAcessoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selecionarMonitorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirMonitorToolStripMenuItem;
     }
 }
 

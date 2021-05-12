@@ -26,14 +26,21 @@ namespace WinSIP.Forms
 
         private void Form_ChoseMonitor_Load( object sender, EventArgs e )
         {
-            foreach ( Screen monitor in Screen.AllScreens )
+            try
             {
+                foreach ( Screen monitor in Screen.AllScreens )
+                {
 
-                int iIndex = listBox1.Items.Add( monitor.DeviceName );
+                    int iIndex = listBox1.Items.Add( monitor.DeviceName );
 
-                if ( pMDI.DisplayMonitor.DeviceName.Equals( monitor.DeviceName ) )
-                    listBox1.SelectedIndex = iIndex;
+                    if ( pMDI.DisplayMonitor.DeviceName.Equals( monitor.DeviceName ) )
+                        listBox1.SelectedIndex = iIndex;
 
+                }
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show( this, ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
             }
         }
 

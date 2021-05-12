@@ -20,40 +20,41 @@ namespace WinSIP
     {
 
         ChromiumWebBrowser picBox;
-        ChromiumWebBrowser footerBox;
         AxWindowsMediaPlayer player;
 
         int iDisplay = 0;
+        int iFooterHeight = 0;
 
         public Form_Template2( int IdDisplay )
         {
-            iDisplay = IdDisplay;
+            try
+            {
+                iDisplay = IdDisplay;
 
-            InitializeComponent();
+                InitializeComponent();
 
-            if ( Cef.IsInitialized == false )
-                Cef.Initialize( new CefSettings() );
+                if ( Cef.IsInitialized == false )
+                    Cef.Initialize( new CefSettings() );
 
-            picBox = new ChromiumWebBrowser();
-            footerBox = new ChromiumWebBrowser();
+                picBox = new ChromiumWebBrowser();
 
-            picBox.ImeMode = ImeMode.NoControl;
-            footerBox.ImeMode = ImeMode.NoControl;
+                picBox.ImeMode = ImeMode.NoControl;
+                picBox.Dock = DockStyle.Fill;
 
-            footerBox.Dock = DockStyle.Fill;
-            picBox.Dock = DockStyle.Fill;
-            
+                player = new AxWindowsMediaPlayer();
+                player.Dock = DockStyle.Fill;
 
-            player = new AxWindowsMediaPlayer();
-            player.Dock = DockStyle.Fill;
+                picBox.Visible = false;
+                player.Visible = false;
 
-            picBox.Visible = false;
-            player.Visible = false;
-            footerBox.Visible = false;
+                this.Controls.Add( picBox );
+                this.Controls.Add( player );
 
-            splitContainer1.Panel1.Controls.Add( picBox );
-            splitContainer1.Panel1.Controls.Add( player );
-            splitContainer1.Panel2.Controls.Add( footerBox );
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show( this, ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+            }
         }
 
         private void FormTemplate2_Load( object sender, EventArgs e )
@@ -69,7 +70,7 @@ namespace WinSIP
 
                 DataSet dsFile = plf.CalculaProximoFicheiro( iDisplay );
 
-                string footer = plf.GetCurrentFooterPath( iDisplay );
+                //string footer = plf.GetCurrentFooterPath( iDisplay );
 
                 timer1.Stop();
 
@@ -84,7 +85,7 @@ namespace WinSIP
                         picBox.Visible = false;
                         player.Visible = true;
                         player.Dock = DockStyle.Fill;
-                        player.Size = splitContainer1.Panel1.ClientSize;
+                        player.Size = this.ClientSize;
                         player.uiMode = "none";
                         player.URL = path;
                         
@@ -97,8 +98,15 @@ namespace WinSIP
                         picBox.Load( path );
                     }
 
-                    footerBox.Visible = true;
-                    footerBox.Load( footer );
+            /*      if ( footer.Length > 0 )
+                    {
+                        footerBox.Visible = true;
+                        footerBox.Load( footer );
+                    }
+                    else
+                    {
+                        footerBox.Visible = false;
+                    } */
 
                     int tempo = ( int )dr["Tempo"];
                     timer1.Interval = tempo * 1000;
@@ -108,7 +116,7 @@ namespace WinSIP
                 }
                 else
                 {
-                    //
+                    
                     plf.ResetMostrouPlaylist( iDisplay );
                     plf.ResetMostrouGrupoPlaylist( iDisplay );
 
