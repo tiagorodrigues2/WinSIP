@@ -44,8 +44,6 @@ namespace WinSIP.Forms
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnOrderUp = new System.Windows.Forms.ToolStripButton();
             this.btnOrderDown = new System.Windows.Forms.ToolStripButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.FooterBox = new System.Windows.Forms.TextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -71,7 +69,7 @@ namespace WinSIP.Forms
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(13, 386);
+            this.BtnCancel.Location = new System.Drawing.Point(13, 360);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(95, 23);
             this.BtnCancel.TabIndex = 7;
@@ -81,7 +79,7 @@ namespace WinSIP.Forms
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(393, 394);
+            this.BtnSave.Location = new System.Drawing.Point(393, 360);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(96, 23);
             this.BtnSave.TabIndex = 6;
@@ -91,7 +89,7 @@ namespace WinSIP.Forms
             // 
             // BtnDuplicar
             // 
-            this.BtnDuplicar.Location = new System.Drawing.Point(393, 365);
+            this.BtnDuplicar.Location = new System.Drawing.Point(393, 331);
             this.BtnDuplicar.Name = "BtnDuplicar";
             this.BtnDuplicar.Size = new System.Drawing.Size(96, 23);
             this.BtnDuplicar.TabIndex = 8;
@@ -198,31 +196,13 @@ namespace WinSIP.Forms
             this.btnOrderDown.ToolTipText = "Ordenar o item selecionado para baixo";
             this.btnOrderDown.Click += new System.EventHandler(this.btnOrderDown_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Caminho para o ficheiro Footer";
-            // 
-            // FooterBox
-            // 
-            this.FooterBox.Location = new System.Drawing.Point(13, 335);
-            this.FooterBox.Name = "FooterBox";
-            this.FooterBox.Size = new System.Drawing.Size(476, 20);
-            this.FooterBox.TabIndex = 15;
-            // 
             // Form_Playlist_Insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(509, 422);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.FooterBox);
+            this.ClientSize = new System.Drawing.Size(505, 397);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnDuplicar);
@@ -266,7 +246,5 @@ namespace WinSIP.Forms
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnOrderUp;
         private System.Windows.Forms.ToolStripButton btnOrderDown;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox FooterBox;
     }
 }

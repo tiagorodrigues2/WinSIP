@@ -128,7 +128,6 @@ namespace WinSIP.Forms
                 {
                     dbPlaylist.IdPlaylist = this.m_IdPlaylist;
                     dbPlaylist.Descritivo = DescritivoBox.Text;
-                    dbPlaylist.FooterPath = FooterBox.Text;
 
                     if ( dbPlaylist.UpdatePlaylist( dbPlaylist ) != 1 )
                         throw new System.AggregateException( "Nao foi possivel atualizar registo na tabela Playlist" );
@@ -159,7 +158,6 @@ namespace WinSIP.Forms
                 {
                     dbPlaylist.IdPlaylist = 0;
                     dbPlaylist.Descritivo = DescritivoBox.Text;
-                    dbPlaylist.FooterPath = FooterBox.Text;
                     int IdPlaylist = dbPlaylist.InsertPlaylist( dbPlaylist );
 
                     if ( IdPlaylist == -1 )
