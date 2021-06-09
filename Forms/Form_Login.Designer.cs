@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
-            this.btnLogEntrar = new System.Windows.Forms.Button();
-            this.txtLogUser = new System.Windows.Forms.TextBox();
-            this.txtLogPass = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.Username = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.lblLogUser = new System.Windows.Forms.Label();
             this.lblLogPass = new System.Windows.Forms.Label();
             this.CriarContaLabel = new System.Windows.Forms.LinkLabel();
@@ -41,35 +41,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnLogEntrar
+            // btnLogin
             // 
-            this.btnLogEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogEntrar.Location = new System.Drawing.Point(54, 204);
-            this.btnLogEntrar.Name = "btnLogEntrar";
-            this.btnLogEntrar.Size = new System.Drawing.Size(269, 58);
-            this.btnLogEntrar.TabIndex = 0;
-            this.btnLogEntrar.Text = "Entrar";
-            this.btnLogEntrar.UseVisualStyleBackColor = true;
-            this.btnLogEntrar.Click += new System.EventHandler(this.btnLogEntrar_Click);
+            this.btnLogin.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(54, 204);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(269, 58);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Entrar";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogEntrar_Click);
             // 
-            // txtLogUser
+            // Username
             // 
-            this.txtLogUser.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogUser.Location = new System.Drawing.Point(54, 74);
-            this.txtLogUser.Name = "txtLogUser";
-            this.txtLogUser.Size = new System.Drawing.Size(269, 26);
-            this.txtLogUser.TabIndex = 1;
-            this.txtLogUser.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
+            this.Username.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(54, 74);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(269, 26);
+            this.Username.TabIndex = 1;
+            this.Username.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
             // 
-            // txtLogPass
+            // Password
             // 
-            this.txtLogPass.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogPass.Location = new System.Drawing.Point(54, 134);
-            this.txtLogPass.Name = "txtLogPass";
-            this.txtLogPass.Size = new System.Drawing.Size(269, 27);
-            this.txtLogPass.TabIndex = 2;
-            this.txtLogPass.UseSystemPasswordChar = true;
-            this.txtLogPass.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
+            this.Password.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(54, 134);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(269, 27);
+            this.Password.TabIndex = 2;
+            this.Password.UseSystemPasswordChar = true;
+            this.Password.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
             // 
             // lblLogUser
             // 
@@ -161,9 +161,9 @@
             this.Controls.Add(this.CriarContaLabel);
             this.Controls.Add(this.lblLogPass);
             this.Controls.Add(this.lblLogUser);
-            this.Controls.Add(this.txtLogPass);
-            this.Controls.Add(this.txtLogUser);
-            this.Controls.Add(this.btnLogEntrar);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.Username);
+            this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -181,9 +181,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogEntrar;
-        private System.Windows.Forms.TextBox txtLogUser;
-        private System.Windows.Forms.TextBox txtLogPass;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label lblLogUser;
         private System.Windows.Forms.Label lblLogPass;
         private System.Windows.Forms.LinkLabel CriarContaLabel;

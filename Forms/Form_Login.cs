@@ -30,14 +30,14 @@ namespace WinSIP
             InitializeComponent();
             Dados = new Users();
 
-            txtLogPass.PasswordChar = '*';
+            Password.PasswordChar = '*';
         }
 
         private void btnLogEntrar_Click(object sender, EventArgs e)
         {
             try
             {
-                CheckUserReturn_t Check = Dados.CheckUser( txtLogUser.Text, txtLogPass.Text );
+                CheckUserReturn_t Check = Dados.CheckUser( Username.Text, Password.Text );
 
                 _LoginSucesso = Check.Success;
 
@@ -48,11 +48,11 @@ namespace WinSIP
                 }
 
                 LoggedUser = Check.user;
-                Properties.Settings.Default.Username = txtLogUser.Text;
+                Properties.Settings.Default.Username = Username.Text;
 
                 if ( RememberMe.Checked == true )
                 {
-                    Properties.Settings.Default.Password = txtLogPass.Text;
+                    Properties.Settings.Default.Password = Password.Text;
                     Properties.Settings.Default.RememberMe = true;
                     Properties.Settings.Default.Save();
                 }
@@ -82,12 +82,12 @@ namespace WinSIP
         {
             try
             {
-                txtLogPass.Text = Properties.Settings.Default.Password;
-                txtLogUser.Text = Properties.Settings.Default.Username;
+                Password.Text = Properties.Settings.Default.Password;
+                Username.Text = Properties.Settings.Default.Username;
 
                 if ( Properties.Settings.Default.RememberMe )
                 {
-                    CheckUserReturn_t Check = Dados.CheckUser( txtLogUser.Text, txtLogPass.Text );
+                    CheckUserReturn_t Check = Dados.CheckUser( Username.Text, Password.Text );
 
                     _LoginSucesso = Check.Success;
 
@@ -111,17 +111,17 @@ namespace WinSIP
             FormRegistar reg = new FormRegistar();
             reg.ShowDialog();
 
-            this.txtLogUser.Text = reg.RegistedUser.username;
+            this.Username.Text = reg.RegistedUser.username;
 
             txtLogUser_TextChanged( this, new EventArgs() );
         }
 
         private void txtLogUser_TextChanged( object sender, EventArgs e )
         {
-            if ( txtLogUser.Text.Length > 0 && txtLogPass.Text.Length > 0 )
-                btnLogEntrar.Enabled = true;
+            if ( Username.Text.Length > 0 && Password.Text.Length > 0 )
+                btnLogin.Enabled = true;
             else
-                btnLogEntrar.Enabled = false;
+                btnLogin.Enabled = false;
         }
 
         private void Form_Login_Load( object sender, EventArgs e )
