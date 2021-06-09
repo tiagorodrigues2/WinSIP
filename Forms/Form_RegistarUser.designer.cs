@@ -61,6 +61,7 @@
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(269, 26);
             this.Username.TabIndex = 4;
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // lblRegPass
             // 
@@ -83,7 +84,7 @@
             this.ConfirmarPassword.Size = new System.Drawing.Size(269, 26);
             this.ConfirmarPassword.TabIndex = 6;
             this.ConfirmarPassword.UseSystemPasswordChar = true;
-            this.ConfirmarPassword.TextChanged += new System.EventHandler(this.ConfirmarPassword_TextChanged);
+            this.ConfirmarPassword.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // lblCodAcesso
             // 
@@ -130,6 +131,7 @@
             this.Password.Size = new System.Drawing.Size(269, 26);
             this.Password.TabIndex = 11;
             this.Password.UseSystemPasswordChar = true;
+            this.Password.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // Code
             // 
@@ -138,6 +140,7 @@
             this.Code.Name = "Code";
             this.Code.Size = new System.Drawing.Size(269, 26);
             this.Code.TabIndex = 13;
+            this.Code.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // pictureBox1
             // 

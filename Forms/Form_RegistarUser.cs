@@ -22,6 +22,8 @@ namespace WinSIP
             InitializeComponent();
 
             Users = new Users();
+
+            Username_TextChanged( this, new EventArgs() );
         }
 
         private void btnRegistar_Click( object sender, EventArgs e )
@@ -66,9 +68,12 @@ namespace WinSIP
             }
         }
 
-        private void ConfirmarPassword_TextChanged( object sender, EventArgs e )
+        private void Username_TextChanged( object sender, EventArgs e )
         {
-
+            if ( Username.Text.Length > 0 && Password.Text.Length > 0 && ConfirmarPassword.Text.Length > 0 && Code.Text.Length > 0 )
+                btnRegistar.Enabled = true;
+            else
+                btnRegistar.Enabled = false;
         }
     }
 }

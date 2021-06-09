@@ -97,6 +97,8 @@ namespace WinSIP
                         this.Close();
                     }
                 }
+
+                txtLogUser_TextChanged( this, new EventArgs() );
             }
             catch ( Exception ex )
             {
@@ -107,12 +109,24 @@ namespace WinSIP
         private void CriarContaLabel_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
         {
             FormRegistar reg = new FormRegistar();
-
-            this.Hide();
             reg.ShowDialog();
-            this.Show();
 
             this.txtLogUser.Text = reg.RegistedUser.username;
+
+            txtLogUser_TextChanged( this, new EventArgs() );
+        }
+
+        private void txtLogUser_TextChanged( object sender, EventArgs e )
+        {
+            if ( txtLogUser.Text.Length > 0 && txtLogPass.Text.Length > 0 )
+                btnLogEntrar.Enabled = true;
+            else
+                btnLogEntrar.Enabled = false;
+        }
+
+        private void Form_Login_Load( object sender, EventArgs e )
+        {
+
         }
     }
 }

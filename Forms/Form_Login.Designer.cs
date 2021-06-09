@@ -59,6 +59,7 @@
             this.txtLogUser.Name = "txtLogUser";
             this.txtLogUser.Size = new System.Drawing.Size(269, 26);
             this.txtLogUser.TabIndex = 1;
+            this.txtLogUser.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
             // 
             // txtLogPass
             // 
@@ -68,6 +69,7 @@
             this.txtLogPass.Size = new System.Drawing.Size(269, 27);
             this.txtLogPass.TabIndex = 2;
             this.txtLogPass.UseSystemPasswordChar = true;
+            this.txtLogPass.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
             // 
             // lblLogUser
             // 
@@ -169,6 +171,7 @@
             this.Name = "Form_Login";
             this.ShowIcon = false;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             this.Shown += new System.EventHandler(this.FormLogin_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
