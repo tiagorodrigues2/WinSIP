@@ -30,7 +30,7 @@ namespace WinSIP
                 pMdi = mdi;
 
                 this.Text = "Gerir Conta: " + User.username;
-                this.label1.Text = "Alterar Password: " + User.username;
+                this.label1.Text = "Sessão iniciada como:\n" + User.username;
 
                 this.ForceChangePassword = ForceChangePassword;
 

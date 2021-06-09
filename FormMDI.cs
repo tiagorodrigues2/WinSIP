@@ -49,6 +49,7 @@ namespace WinSIP
             GruposPlaylistViewer = new Form_GruposPlaylist_View();
             UsersViewer = new Form_Users_View();
             CodesViewer = new Form_AccessCodes_View();
+            
 
             DisplayViewer.MdiParent = this;
             FilesViewer.MdiParent = this;
@@ -112,12 +113,6 @@ namespace WinSIP
         private void playlistToolStripMenuItem_Click( object sender, EventArgs e )
         {
             PlaylistViewer.Show();
-        }
-
-        private void template1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Template1 FRM = new Form_Template1();
-            FRM.Show();
         }
 
 

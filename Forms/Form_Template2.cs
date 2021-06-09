@@ -23,7 +23,6 @@ namespace WinSIP
         AxWindowsMediaPlayer player;
 
         int iDisplay = 0;
-        int iFooterHeight = 0;
 
         public Form_Template2( int IdDisplay )
         {

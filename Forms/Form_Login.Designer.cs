@@ -37,14 +37,16 @@
             this.CriarContaLabel = new System.Windows.Forms.LinkLabel();
             this.EsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.RememberMe = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogEntrar
             // 
-            this.btnLogEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogEntrar.Location = new System.Drawing.Point(211, 287);
+            this.btnLogEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogEntrar.Location = new System.Drawing.Point(54, 204);
             this.btnLogEntrar.Name = "btnLogEntrar";
-            this.btnLogEntrar.Size = new System.Drawing.Size(269, 33);
+            this.btnLogEntrar.Size = new System.Drawing.Size(269, 58);
             this.btnLogEntrar.TabIndex = 0;
             this.btnLogEntrar.Text = "Entrar";
             this.btnLogEntrar.UseVisualStyleBackColor = true;
@@ -52,45 +54,54 @@
             // 
             // txtLogUser
             // 
-            this.txtLogUser.Location = new System.Drawing.Point(211, 142);
+            this.txtLogUser.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogUser.Location = new System.Drawing.Point(54, 74);
             this.txtLogUser.Name = "txtLogUser";
-            this.txtLogUser.Size = new System.Drawing.Size(269, 20);
+            this.txtLogUser.Size = new System.Drawing.Size(269, 26);
             this.txtLogUser.TabIndex = 1;
             // 
             // txtLogPass
             // 
-            this.txtLogPass.Location = new System.Drawing.Point(211, 202);
+            this.txtLogPass.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogPass.Location = new System.Drawing.Point(54, 134);
             this.txtLogPass.Name = "txtLogPass";
-            this.txtLogPass.Size = new System.Drawing.Size(269, 20);
+            this.txtLogPass.Size = new System.Drawing.Size(269, 27);
             this.txtLogPass.TabIndex = 2;
             this.txtLogPass.UseSystemPasswordChar = true;
             // 
             // lblLogUser
             // 
             this.lblLogUser.AutoSize = true;
-            this.lblLogUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogUser.Location = new System.Drawing.Point(206, 114);
+            this.lblLogUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogUser.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogUser.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLogUser.Location = new System.Drawing.Point(49, 46);
             this.lblLogUser.Name = "lblLogUser";
-            this.lblLogUser.Size = new System.Drawing.Size(93, 25);
+            this.lblLogUser.Size = new System.Drawing.Size(190, 25);
             this.lblLogUser.TabIndex = 3;
-            this.lblLogUser.Text = "Usuário";
+            this.lblLogUser.Text = "Nome de Utilizador";
             // 
             // lblLogPass
             // 
             this.lblLogPass.AutoSize = true;
-            this.lblLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogPass.Location = new System.Drawing.Point(206, 174);
+            this.lblLogPass.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogPass.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblLogPass.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLogPass.Location = new System.Drawing.Point(49, 106);
             this.lblLogPass.Name = "lblLogPass";
-            this.lblLogPass.Size = new System.Drawing.Size(114, 25);
+            this.lblLogPass.Size = new System.Drawing.Size(104, 25);
             this.lblLogPass.TabIndex = 4;
             this.lblLogPass.Text = "Password";
             // 
             // CriarContaLabel
             // 
             this.CriarContaLabel.AutoSize = true;
-            this.CriarContaLabel.Location = new System.Drawing.Point(211, 258);
+            this.CriarContaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CriarContaLabel.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CriarContaLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CriarContaLabel.Location = new System.Drawing.Point(363, 239);
             this.CriarContaLabel.Name = "CriarContaLabel";
-            this.CriarContaLabel.Size = new System.Drawing.Size(117, 13);
+            this.CriarContaLabel.Size = new System.Drawing.Size(212, 23);
             this.CriarContaLabel.TabIndex = 5;
             this.CriarContaLabel.TabStop = true;
             this.CriarContaLabel.Text = "Registar novo utilizador";
@@ -99,9 +110,12 @@
             // EsqueceuSenha
             // 
             this.EsqueceuSenha.AutoSize = true;
-            this.EsqueceuSenha.Location = new System.Drawing.Point(211, 271);
+            this.EsqueceuSenha.BackColor = System.Drawing.Color.Transparent;
+            this.EsqueceuSenha.Font = new System.Drawing.Font("Bahnschrift", 10.25F);
+            this.EsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.EsqueceuSenha.Location = new System.Drawing.Point(159, 114);
             this.EsqueceuSenha.Name = "EsqueceuSenha";
-            this.EsqueceuSenha.Size = new System.Drawing.Size(122, 13);
+            this.EsqueceuSenha.Size = new System.Drawing.Size(159, 17);
             this.EsqueceuSenha.TabIndex = 6;
             this.EsqueceuSenha.TabStop = true;
             this.EsqueceuSenha.Text = "Esqueceu-se da senha?";
@@ -110,19 +124,36 @@
             // RememberMe
             // 
             this.RememberMe.AutoSize = true;
-            this.RememberMe.Location = new System.Drawing.Point(214, 229);
+            this.RememberMe.BackColor = System.Drawing.Color.Transparent;
+            this.RememberMe.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12.75F, System.Drawing.FontStyle.Bold);
+            this.RememberMe.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.RememberMe.Location = new System.Drawing.Point(54, 167);
             this.RememberMe.Name = "RememberMe";
-            this.RememberMe.Size = new System.Drawing.Size(177, 17);
+            this.RememberMe.Size = new System.Drawing.Size(276, 25);
             this.RememberMe.TabIndex = 7;
             this.RememberMe.Text = " Iniciar sessão automaticamente";
-            this.RememberMe.UseVisualStyleBackColor = true;
+            this.RememberMe.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::WinSIP.Properties.Resources.logo_transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(379, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 174);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(687, 407);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::WinSIP.Properties.Resources.color;
+            this.ClientSize = new System.Drawing.Size(602, 301);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RememberMe);
             this.Controls.Add(this.EsqueceuSenha);
             this.Controls.Add(this.CriarContaLabel);
@@ -139,6 +170,7 @@
             this.ShowIcon = false;
             this.Text = "Login";
             this.Shown += new System.EventHandler(this.FormLogin_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +186,6 @@
         private System.Windows.Forms.LinkLabel CriarContaLabel;
         private System.Windows.Forms.LinkLabel EsqueceuSenha;
         private System.Windows.Forms.CheckBox RememberMe;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

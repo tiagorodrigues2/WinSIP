@@ -247,12 +247,6 @@
     <Compile Include="Forms\Form_Playlist_View.Designer.cs">
       <DependentUpon>Form_Playlist_View.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Template1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_Template1.Designer.cs">
-      <DependentUpon>Form_Template1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Form_Template2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,9 +330,6 @@
     <EmbeddedResource Include="Forms\Form_Playlist_View.resx">
       <DependentUpon>Form_Playlist_View.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Template1.resx">
-      <DependentUpon>Form_Template1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Template2.resx">
       <DependentUpon>Form_Template2.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +402,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="A FAZER.txt" />
+    <None Include="Resources\background-small.jpg" />
+    <None Include="Resources\logo_transparent.png" />
+    <None Include="Resources\color.jpg" />
     <None Include="Resources\up-arrow .png" />
     <None Include="Resources\down-arrow.png" />
   </ItemGroup>
