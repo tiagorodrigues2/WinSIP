@@ -138,6 +138,7 @@ namespace WinSIP
             PlaylistFilesViewer.Hide();
             GruposPlaylistViewer.Hide();
             UsersViewer.Hide();
+            CodesViewer.Hide();
 
             this.LoggedUser.UserID = 0;
             this.LoggedUser.username = "";

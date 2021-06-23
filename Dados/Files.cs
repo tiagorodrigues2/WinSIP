@@ -146,7 +146,7 @@ namespace WinSIP.Dados
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add( "Descritivo", MySqlDbType.VarChar, 128 ).Value = dados.Descritivo;
             cmd.Parameters.Add( "Path", MySqlDbType.VarChar, 256 ).Value = dados.Path;
-            cmd.Parameters.Add( "Tempo", MySqlDbType.Time ).Value = dados.Tempo;
+            cmd.Parameters.Add( "Tempo", MySqlDbType.Int32 ).Value = dados.Tempo;
             cmd.Parameters.Add( "IdFile", MySqlDbType.Int32 ).Value = dados.IdFile;
 
             try
