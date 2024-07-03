@@ -37,11 +37,6 @@ namespace WinSIP.Dados
 
                 try
                 {
-                    /*
-                    https://web10.meuhost.net:7544/
-                    Con = new MySqlConnection( "Server=130.185.85.210;PORT=7575;Database=monitores;Uid=user_monitores;Pwd=6ghd%sKxA;" );
-                    */
-
                     Con = new MySqlConnection( "Server=localhost;Database=monitores;Uid=root;" );
 
                 } catch ( Exception ex )
